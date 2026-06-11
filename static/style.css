@@ -1,0 +1,62 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+
+:root {
+    --bs-primary: #4f46e5; 
+    --bs-primary-rgb: 79, 70, 229;
+    --bs-body-font-family: 'Inter', sans-serif;
+}
+
+/* Base Overrides */
+body {
+    background-color: #f8f9fa; /* Bootstrap 'light' gray */
+}
+
+/* Custom button overrides */
+.btn-primary {
+    background-color: #4f46e5;
+    border-color: #4f46e5;
+}
+
+.btn-primary:hover {
+    background-color: #4338ca;
+    border-color: #4338ca;
+}
+
+.text-primary {
+    color: #4f46e5 !important;
+}
+
+.border-indigo {
+    border-color: #4338ca !important;
+}
+
+.bg-indigo {
+    background-color: #4338ca !important;
+}
+
+/* Feature Cards specific styling */
+.icon-wrapper {
+    width: 60px;
+    height: 60px;
+}
+
+.feature-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 4px solid #4f46e5;
+}
+
+.feature-card.border-top-success {
+    border-top-color: #198754 !important;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+}
+
+/* Navbar Logo Fix */
+.navbar-brand span {
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}

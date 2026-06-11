@@ -1,0 +1,168 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Resume Builder</title>
+    
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Your Custom CSS -->
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold d-flex align-items-center" href="{% url 'home' %}">
+                <i class="bi bi-file-earmark-text-fill text-primary me-2 fs-4"></i>
+                <span>ResumeCraft</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#templates">Templates</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'login' %}">Log In</a>
+                    </li>
+                </ul>
+                <a href="{% url 'signup' %}" class="btn btn-primary px-4 rounded-pill">Sign Up</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section py-5 text-center bg-white">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h1 class="display-4 fw-bolder mb-3">
+                        Build Your <span class="text-primary">Professional Resume</span> in Minutes
+                    </h1>
+                    <p class="lead text-secondary mb-5">
+                        Land your dream job with a polished, ATS-friendly resume. Simple steps, stunning results.
+                    </p>
+                    <a href="{% url 'signup' %}" class="btn btn-primary btn-lg px-5 py-3 rounded-3 shadow">
+                        Start Building Now <i class="bi bi-arrow-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section id="features" class="py-5 bg-light">
+        <div class="container py-4">
+            <h2 class="text-center fw-bold mb-5">Designed for Your Success</h2>
+            <div class="row g-4">
+                
+                <!-- Feature 1 -->
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm feature-card border-top-success">
+                        <div class="card-body text-center p-4">
+                            <div class="icon-wrapper bg-success text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3">
+                                <i class="bi bi-check-circle fs-4"></i>
+                            </div>
+                            <h4 class="card-title fw-bold">ATS Optimized</h4>
+                            <p class="card-text text-secondary">Templates designed to pass through automated screening software successfully.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm feature-card">
+                        <div class="card-body text-center p-4">
+                            <div class="icon-wrapper bg-indigo text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3">
+                                <i class="bi bi-file-earmark-pdf fs-4"></i>
+                            </div>
+                            <h4 class="card-title fw-bold">PDF Export</h4>
+                            <p class="card-text text-secondary">Generate high-resolution, perfectly formatted PDFs instantly.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Templates Section -->
+    <section id="templates" class="py-5 bg-white">
+        <div class="container py-4">
+            <h2 class="text-center fw-bold mb-5">Choose Your Winning Design</h2>
+            <div class="row g-4">
+                
+                <!-- Template 1 -->
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-img-top bg-light p-3 border-bottom border-4 border-primary">
+                            <img src="https://placehold.co/400x500/4f46e5/ffffff?text=Modern" class="img-fluid rounded" alt="Modern Template">
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="fw-bold">The Modernist</h5>
+                            <p class="text-secondary small">Clean lines. Great for tech roles.</p>
+                            <a href="#" class="btn btn-outline-primary btn-sm w-100">Select Template</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Template 2 -->
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-img-top bg-light p-3 border-bottom border-4 border-success">
+                            <img src="https://placehold.co/400x500/10b981/ffffff?text=Classic" class="img-fluid rounded" alt="Classic Template">
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="fw-bold">The Classic</h5>
+                            <p class="text-secondary small">Traditional. Best for finance/legal.</p>
+                            <a href="#" class="btn btn-outline-primary btn-sm w-100">Select Template</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Template 3 -->
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-img-top bg-light p-3 border-bottom border-4 border-indigo">
+                            <img src="https://placehold.co/400x500/4338ca/ffffff?text=Creative" class="img-fluid rounded" alt="Creative Template">
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="fw-bold">The Creative</h5>
+                            <p class="text-secondary small">Balanced design with color accents.</p>
+                            <a href="#" class="btn btn-outline-primary btn-sm w-100">Select Template</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="text-center mt-5">
+                <a href="#" class="btn btn-secondary">View All Templates</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 text-center">
+        <div class="container">
+            <p class="mb-0 small text-white-50">&copy; 2025 ResumeCraft. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Bundle JS (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Your Custom JS -->
+    <script src="{% static 'script.js' %}"></script>
+</body>
+</html>

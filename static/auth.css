@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Custom Primary Color (Indigo) */
+.text-primary { color: #4f46e5 !important; }
+.btn-primary { 
+    background-color: #4f46e5; 
+    border-color: #4f46e5; 
+}
+.btn-primary:hover { 
+    background-color: #4338ca; 
+    border-color: #4338ca; 
+}
+a { color: #4f46e5; }
+
+/* Card Sizing */
+.auth-card {
+    width: 100%;
+    max-width: 400px; /* Keeps the form nice and compact */
+}
+
+/* Input Focus Ring Color Override */
+.form-control:focus {
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 0.25rem rgba(79, 70, 229, 0.25);
+}

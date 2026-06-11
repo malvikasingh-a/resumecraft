@@ -1,0 +1,14 @@
+# Environments
+env/
+venv/
+
+# OS generated files
+.DS_Store
+
+#cache  files
+__pycache__/
+*.pyc
+*.py[cod]
+media/
+.vscode/
+db.sqlite3
